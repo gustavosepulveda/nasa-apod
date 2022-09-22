@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import NavBar from "./NavBar";
 
 const apiKey = process.env.REACT_APP_NASA_KEY;
 
@@ -24,26 +25,29 @@ export default function NasaPhoto() {
 	if (!photoData) return <div />;
 
 	return (
-		<div>
-			{/* ternary for if either a image or a video  */}
-			{photoData.media_type === "image" ? (
-				<img src={photoData.url} alt={photoData.title} />
-			) : (
-				// iframe imbeds html element inside another html, in this case a video
-				<iframe
-					title="space-video"
-					src={photoData.url}
-					gesture="media"
-					allow="encrypted-media"
-					allowFullScreen
-					className="photo"
-				/>
-			)}
+		<>
+			<NavBar />
 			<div>
-				<h1>{photoData.title}</h1>
-				<p>{photoData.date}</p>
-				<p>{photoData.explanation}</p>
+				{/* ternary for if either a image or a video  */}
+				{photoData.media_type === "image" ? (
+					<img src={photoData.url} alt={photoData.title} />
+				) : (
+					// iframe imbeds html element inside another html, in this case a video
+					<iframe
+						title="space-video"
+						src={photoData.url}
+						gesture="media"
+						allow="encrypted-media"
+						allowFullScreen
+						className="photo"
+					/>
+				)}
+				<div>
+					<h1>{photoData.title}</h1>
+					<p>{photoData.date}</p>
+					<p>{photoData.explanation}</p>
+				</div>
 			</div>
-		</div>
+		</>
 	);
 }
