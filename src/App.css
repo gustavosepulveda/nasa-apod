@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  color: #33cccc;
+  color: #ecb365;
   line-height: 1.7;
   font-size: 19px;
   background-color: #000033;
@@ -19,7 +19,49 @@ body {
 
 .home-link {
   font-size: 40px;
-  background: ;
+  background: #ecb365;
+  display: inline-block;
+  padding: 40px 80px;
+  color:#fff;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: 0.3 ease all;
+  text-transform: uppercase;
+}
+
+.home-link:hover {
+  border-radius: 5px;
+  background: #6e542f;
+}
+
+/* navbar */
+
+.navbar {
+  background-color: rgba(22, 22, 22, 0.8);
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Nasa Photo */
+
+.nasa-photo {
+  display: flex; 
+  padding: 40px;
+  margin: 0 auto;
+  max-height: 100%;
+}
+
+.nasa-photo img {
+  width: 50%;
+  margin-right: 50px;
+  object-fit: contain;
+  max-height: 80vh;
+}
+
+.nasa-photo h1 {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .nasa-photo .date {

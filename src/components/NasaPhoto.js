@@ -27,10 +27,10 @@ export default function NasaPhoto() {
 	return (
 		<>
 			<NavBar />
-			<div>
+			<div className="nasa-photo">
 				{/* ternary for if either a image or a video  */}
 				{photoData.media_type === "image" ? (
-					<img src={photoData.url} alt={photoData.title} />
+					<img src={photoData.url} alt={photoData.title} className="photo" />
 				) : (
 					// iframe imbeds html element inside another html, in this case a video
 					<iframe
@@ -44,8 +44,8 @@ export default function NasaPhoto() {
 				)}
 				<div>
 					<h1>{photoData.title}</h1>
-					<p>{photoData.date}</p>
-					<p>{photoData.explanation}</p>
+					<p className="date">{photoData.date}</p>
+					<p className="explanation">{photoData.explanation}</p>
 				</div>
 			</div>
 		</>
