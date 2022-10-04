@@ -6,7 +6,7 @@ body {
   line-height: 1.7;
   font-size: 19px;
   background-color: #000033;
-  background-image: url(./components/images/Mediteriansea.jpg);
+  background-image: url(./components/images/stars.jpg);
   background-size: cover;
 }
 
@@ -17,6 +17,20 @@ body {
   justify-content: center;
 }
 
+.link {
+  color: #efefef;
+  display: inline-block;
+  padding: 3px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s ease all;
+}
+
+.link:hover {
+  color: #ecb365;
+  transform: scale(1.1);
+}
+
 .home-link {
   font-size: 40px;
   background: #ecb365;
@@ -25,13 +39,13 @@ body {
   color:#fff;
   border-radius: 50%;
   text-decoration: none;
-  transition: 0.3 ease all;
+  transition: 0.3s ease all;
   text-transform: uppercase;
 }
 
 .home-link:hover {
   border-radius: 5px;
-  background: #6e542f;
+  background: #a6804a;
 }
 
 /* navbar */
